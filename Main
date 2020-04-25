@@ -1,0 +1,40 @@
+import java.util.HashSet;
+import java.util.Set;
+
+/* 
+Set из котов
+*/
+
+public class Solution {
+
+    public static class Cat{
+
+    }
+    public static void main(String[] args) {
+        Set<Cat> cats = createCats();
+        Object catRem = null;
+        for (Cat curSet:cats) {
+            catRem = curSet;
+        }
+        cats.remove(catRem);
+
+        printCats(cats);
+    }
+
+    public static Set<Cat> createCats() {
+         Set<Cat> set = new HashSet<>();
+    int size = set.size();
+    while (set.size()<size+3){
+        set.add(new Cat());
+    }
+    return set;
+    }
+
+    public static void printCats(Set<Cat> cats) {
+        for (Cat curSet:cats) {
+            System.out.println(curSet);
+        }
+    }
+
+    // step 1 - пункт 1
+}
